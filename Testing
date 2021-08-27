@@ -1,0 +1,36 @@
+package newpackage;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.firefox.FirefoxDriver;
+import org.openqa.selenium.support.ui.Select;
+import org.openqa.selenium.By;
+
+public class accessDropDown {
+ public static void main(String[] args) { 
+		System.setProperty("webdriver.gecko.driver","C:\\geckodriver.exe");
+	    String baseURL = "https://car.iselect.com.au/car/compare-car-insurance/gatewayStore ";
+	    WebDriver driver = new FirefoxDriver();
+		driver.get(baseURL);
+
+		Select drpMake = new Select(driver.findElement(By.name("Make")));
+		drpMake.selectByVisibleText("Hyundai");
+    Select drpModel = new Select(driver.findElement(By.name("Model")));
+		drpModel.selectByVisibleText("Coupe");
+    Select drpYear = new Select(driver.findElement(By.name("Year")));
+		drpYear.selectByVisibleText("2000");
+    Select drpCartypeorseries = new Select(driver.findElement(By.name("Car type or series")));
+		drpCartypeorseries.selectByVisibleText("RD S2 SX Coupe 2dr Man 5sp 1.8i");
+    Select drpTransmission = new Select(driver.findElement(By.name("Transmission")));
+		drpTransmission.selectByVisibleText("Manual");
+    Select drpFueltype = new Select(driver.findElement(By.name("Fuel Type")));
+		drpFueltype.selectByVisibleText("Petrol- Unleaded ULP");
+    Select drpColor = new Select(driver.findElement(By.name("Colour")));
+		drpColor.selectByVisibleText("Black");
+		driver.find_element_by_css_selector("Comprehensive")
+    find_element_by_css_selector.click()
+    Select PleaseSelect = new Select(driver.findElement(By.name("Why are you looking for cover")));
+		drpPleaseSelect.selectByVisibleText("I have bought a new car");
+    WebElement firstCheckbox = driver.findElement(By.xpath("//input[@type='checkbox'][1]"))
+    firstCheckbox.click()
+    driver.findElement(By.name("Continue")).click();
+ }
+}
